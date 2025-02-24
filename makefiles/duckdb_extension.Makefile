@@ -45,6 +45,8 @@ endif
 #### Windows config
 ifeq ($(DUCKDB_PLATFORM),windows_amd64_mingw)
 	RUST_FLAGS=-DRust_CARGO_TARGET=x86_64-pc-windows-gnu
+else ifeq ($(DUCKDB_PLATFORM),windows_amd64_rtools)
+	RUST_FLAGS=-DRust_CARGO_TARGET=x86_64-pc-windows-gnu
 endif
 
 #### VCPKG config
